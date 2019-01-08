@@ -34,7 +34,7 @@ function bindAnimation() {
             animatedBlock();
         }
 
-        if(scrolled>widthToCv){
+        if(scrolled>widthToCv+40){
             animateWords();
         }
 
