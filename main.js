@@ -28,13 +28,14 @@ function bindAnimation() {
     window.onscroll = function() {
         var scrolled = window.pageYOffset || document.documentElement.scrollTop;
         var width  = document.getElementById('credo').offsetTop;
-        var widthToCv =  document.getElementById('blocks').offsetTop;
+        var widthToCv =  document.querySelector('#bussines').offsetTop;
         var navbar = document.getElementsByClassName('pos-f-t')[0];
         if(scrolled>width){
             animatedBlock();
         }
 
-        if(scrolled>widthToCv+40){
+        if(scrolled>widthToCv){
+            console.log(widthToCv);
             animateWords();
         }
 
