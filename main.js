@@ -28,9 +28,14 @@ function bindAnimation() {
     window.onscroll = function() {
         var scrolled = window.pageYOffset || document.documentElement.scrollTop;
         var width  = document.getElementById('credo').offsetTop;
+        var widthToCv =  document.getElementById('blocks').offsetTop;
         var navbar = document.getElementsByClassName('pos-f-t')[0];
         if(scrolled>width){
             animatedBlock();
+        }
+
+        if(scrolled>widthToCv){
+            animateWords();
         }
 
         if(scrolled>10){
@@ -95,5 +100,4 @@ typping();
 setTimeout(animateCircle,5500);
 bindAnimation();
 setInterval(animatedTel,1000);
-animateWords();
 
