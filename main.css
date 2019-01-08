@@ -1,3 +1,19 @@
+body,h1,h2,h3,h3,h4,h5,h6,a,p,span
+{
+    font-family: 'Oswald', sans-serif;
+}
+i{
+    margin: 5px;
+}
+span.element{
+    line-height: 1.5;
+    padding: 5px 5px 0 5px;
+}
+.navbar-toggler{
+    border: 3px solid rgba(244, 232, 66,0.7);
+
+}
+
 .bg-dark-grey
 {
     background-color: #cfd1d3;
@@ -10,11 +26,10 @@
     background-color: firebrick;
 }
 h1{
-    font-max-size: 45px;
+    font-size: 45px;
     margin-top: 150px;
     margin-bottom: 150px;
     text-align: center;
-    font-family: 'Vollkorn SC', serif;
     background-color: rgba(194, 232, 225 , 0.15);
 
 }
@@ -110,7 +125,6 @@ h4{
 }
 h3{
     text-align: center;
-    font-family: 'Russo One', sans-serif;
     font-size: 5vw;
     padding: 50px 0;
 
@@ -119,6 +133,11 @@ h3{
 .bg-yellow{
     background-color: rgba(244, 232, 66,0.7);
 }
+.yellow-border{
+    background-color: rgba(244, 232, 66,0.7)!important;
+}
+
+
 .first_span{
 
 
@@ -166,7 +185,17 @@ p i {
     background-size: cover;
     background-image: url("images/cirle.jpg"); /* The image used */
 }
+i.fa-address-book{
+    font-size: 8vw;
+}
 
+i.fa-address-book:hover{
+
+    background-color: rgba(244, 232, 66,0.7);
+}
+a.price{
+    margin: 25px 0;
+}
 .circle ul li img {
     position: absolute;
     width: 100%;
@@ -181,7 +210,6 @@ p i {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    font-family: 'Vollkorn SC', serif;
     color: #000;
     margin: 0;
     padding: 10px;
@@ -190,13 +218,21 @@ p i {
 
 }
 
+.sidenav a:hover{
+    background-color: rgba(244, 232, 66,0.7);
+}
+
 #cv{
-    margin: 100px 0 0 0;
+    margin: 50px 0 0 0;
     background-color: #E0E0E0;
-    padding: 20px 0;
+    padding: 40px 0;
 }
 .cv-text{
-
+    font-size: 18px;
+    line-height: 1.5;
+}
+p.cv-text span.hidden{
+    padding: 5px;
 }
 
 footer{
@@ -214,6 +250,12 @@ footer{
 }
 
 @media only screen and (max-width: 450px) {
+    h1{
+        margin-bottom: 50px;
+    }
+    i.fa-address-book{
+        display: none;
+    }
     h3{font-size: 8vw;}
     .circle ul li h3 { font-size: 4vw;}
 

@@ -41,6 +41,28 @@ function bindAnimation() {
     }
 }
 
+function animateWords(){
+
+    var gram = document.querySelector('i.fa-address-book');
+
+
+
+    var words = document.querySelectorAll('p.cv-text span.hidden');
+    for (var i = 0; i < words.length; i++) {
+        setTimeout(function (y) {
+            words[y].classList.add('show');
+            words[y].classList.add('flash');
+            words[y].classList.add('bg-yellow');
+
+        }, i * 1000, i);
+    }
+    gram.classList.add('show');
+    gram.classList.add('fadeInLeft');
+
+}
+
+
+
 function animateCircle() {
     var circle = document.getElementsByClassName('circle')[0];
 
@@ -63,8 +85,15 @@ function typping() {
     var typed = new Typed(".element", options);
 }
 
+function animatedTel() {
+        var tel = document.getElementsByClassName('fa-phone-volume')[0];
+        tel.classList.toggle('tada');
+        tel.style.fontSize = '36 px';
+}
+
 typping();
 setTimeout(animateCircle,5500);
 bindAnimation();
-//animatedBlock();
+setInterval(animatedTel,1000);
+animateWords();
 
